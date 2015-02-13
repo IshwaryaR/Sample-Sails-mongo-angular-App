@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Apple",
+    "img": "../images/apple.jpg",
+    "rupee": 100
+  },
+  {
+    "name": "Guava",
+    "img": "../images/guava.jpg",
+    "rupee": 40
+  },
+  {
+    "name": "Orange",
+    "img": "../images/orange.jpg",
+    "rupee": 70
+  },
+  {
+    "name": "Pomegranate",
+    "img": "../images/pomegranate.jpg",
+    "rupee": 90
+  },
+  {
+    "name": "Watermelon",
+    "img": "../images/Watermelons.jpg",
+    "rupee": 30
+  },
+  {
+    "name": "Strawberry",
+    "img": "../images/strawberry.jpg",
+    "rupee":60
+  },
+  {
+    "name": "Pineapple",
+    "img": "../images/pine.jpg",
+    "rupee":"60"
+  },
+  {
+    "name": "Grapes",
+    "img": "../images/grapes.jpg",
+    "rupee": "50"
+  },
+  {
+    "name": "Banana",
+    "img": "../images/banana.jpg",
+    "rupee": "25"
+  }
+]

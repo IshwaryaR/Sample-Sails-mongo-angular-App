@@ -1,0 +1,86 @@
+<div class="wrapper">
+<div class="header">
+<span class="headertext">Fresh Fruit store</span>
+</div>
+  <div class="menu">
+    <a href="#/">Home</a> |
+    <a href="#/fruits">Fruits in Store</a> |
+    <a href="#/contact">Contact Us</a>
+  </div>
+		<div class="content">
+		<div class="panel" ng-controller="fruitlistcontroller"> 
+      <div class="billsection">
+        <span class="boldertxt">Available fruits:</span><br/><br/>
+         <div ng-repeat="item in fruititems">
+           <div class="action-checkbox"> 
+             <img ng-src="{{item.img}}" width="100" height="100">
+             <span class="fruitname">{{item.name}} 1 kg - {{item.rupee}} Rupees</span>
+               <div class="right top35">
+                 <input id="{{item.name}}" type="checkbox" value="{{item.name}}" ng-checked="selection.indexOf(item.name) > -1" ng-click="toggleSelection(item.name)"  class="dropdowntoggle" />                   
+                   <select id="selectquan_{{item.name}}" ng-options="kgs for kgs in myOptions" ng-click="onselectitem(item.name,item.rupee)" ng-model="kg" disabled>
+                      <option value="" selected>select quantity</option>
+                 </select>
+                <div id="totalprice_{{item.name}}" style="display:none">
+                  {{kg}} x {{item.rupee}} = Rs.{{item.rupee * kg }} </div>  
+             </div>
+             <hr>
+           </div>
+        </div>
+     </div>
+ 
+	 <div id="selecteditem" style="display:none">
+     <div id="billbox">
+		 <span class="boldertxt top35">Selected Items:</span> 
+				<div id="selectnames">
+         <div ng-repeat="quantity in selectedquantity">
+          <label> Item Name :</label>     {{quantity.name}} 
+          <label> Quantity  :</label> {{quantity.value}} Kgs 
+          <label> Cost  :</label> Rs - {{quantity.cost}} 
+         </div>
+         <label> Total-{{getTotal();}}</label>
+          <br/>
+          <button class="btn btn-primary btn-lg top35" style="clear:both" data-toggle="modal" data-target="#myModal" ng-click="addItem();">Proceed</button> 
+		  </div>
+    </div>
+   
+    <! -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-show="displayForm"> 
+      <div class="modal-dialog"> 
+        <div class="modal-content">     
+          <div class="modal-body">   
+              <div class="form-group">  <input type="text" ng-model="fruits.username"  class="form-control" placeholder="User name"/></div> 
+              <div class="form-group"><input type="text" ng-model="fruits.address"  class="form-control" placeholder="Address"/></div> 
+             <div class="form-group"><input type="text" ng-model="fruits.phoneno"  class="form-control" placeholder="Phone No"/></div> 
+          </div> 
+          <div class="modal-footer">      
+             <button class="btn btn-primary" ng-click="saveItem()">Save</button> 
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+          </div> 
+      </div> 
+    </div> 
+  </div>  
+ <! -->
+     
+     
+     <div class="modal fade" id="newmodel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none"> 
+      <div class="modal-dialog"> 
+        <div class="modal-content">     
+          <div class="modal-body">   
+              Thanks for ordering.Your items will be delivered soon!!!
+          </div> 
+      </div> 
+    </div> 
+  </div>  
+     
+     
+     
+     <div id="test">
+       </div>
+</div>
+</div>
+  <div class="footer">
+	  	<span class="footertext">© Copyright 2015 Fresh Fruit store . All rights reserved</span>
+		</div> 
+</div>
+</div>
+
