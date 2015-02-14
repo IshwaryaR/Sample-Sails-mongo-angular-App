@@ -21,7 +21,7 @@
                       <option value="" selected>select quantity</option>
                  </select>
                 <div id="totalprice_{{item.name}}" style="display:none">
-                  {{kg}} x {{item.rupee}} = Rs.{{item.rupee * kg }} </div>  
+                  {{kg}} kg x {{item.rupee}} = Rs.{{item.rupee * kg }} </div>  
              </div>
              <hr>
            </div>
@@ -53,29 +53,24 @@
              <div class="form-group"><input type="text" ng-model="fruits.phoneno"  class="form-control" placeholder="Phone No"/></div> 
           </div> 
           <div class="modal-footer">      
-             <button class="btn btn-primary" ng-click="saveItem()">Save</button> 
+             <button class="btn btn-primary" ng-click="odrderItem()">Order</button> 
              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
           </div> 
       </div> 
     </div> 
   </div>  
  <! -->
-     
-     
      <div class="modal fade" id="newmodel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none"> 
       <div class="modal-dialog"> 
         <div class="modal-content">     
           <div class="modal-body">   
-              Thanks for ordering.Your items will be delivered soon!!!
+            <center>Thanks for ordering.Your items will be delivered soon!!!</center>
           </div> 
       </div> 
     </div> 
   </div>  
-     
-     
-     
-     <div id="test">
-       </div>
+  <div id="test">
+   </div>
 </div>
 </div>
   <div class="footer">
@@ -83,4 +78,15 @@
 		</div> 
 </div>
 </div>
+$ git remote add origin https://github.com/IshwaryaRajendran/Sample-App.git
+# Set a new remote
+
+$ git remote -v
+# Verify new remote
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
+
+$ git add .
+$ git commit -m "initial commit"
+$ git push origin master
 
